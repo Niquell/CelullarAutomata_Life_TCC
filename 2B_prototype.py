@@ -51,13 +51,12 @@ for i in range(side):
     for j in range(side):
         arr[i].append(random.choice(choices))
 
-colors = ['green', 'red', 'black']
+colors = ['white', 'red', 'black']
 bounds = [0, 1, 2, 3]
 
 _2B = CA.CellularAutomata(arr, fogo)
 
 s = Screen(_2B.cells, colors, bounds)
-s.show()
 
 while True:
     s.frame(_2B.cells)
